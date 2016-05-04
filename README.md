@@ -1,5 +1,9 @@
 # annatorok
 
-First git repository
+List for all the important information:
 
-[Cloned git repo for Website](https://github.com/annatorok/annatorok.github.io)
+[Link for velox-syllabus](https://github.com/annatorok/velox-syllabus)
+
+[Link for Website](http://annatorok.github.io/)
+
+[Link for Repo](https://github.com/annatorok/annatorok.github.io)

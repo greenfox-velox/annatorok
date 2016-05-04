@@ -2,4 +2,4 @@
 
 First git repository
 
-[Cloned sylabbus repo link](https://github.com/greenfox-velox/annatorok)
+[Cloned git repo for Website](https://github.com/annatorok/annatorok.github.io)

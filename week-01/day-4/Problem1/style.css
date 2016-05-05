@@ -1,0 +1,13 @@
+body {
+  font-size: 30px;
+  color: red;
+}
+
+p {
+  width: 240px;
+  background-color: yellow;
+  border: 5px solid;
+  border-color: black;
+  padding: 20px;
+  margin: 10px;
+}

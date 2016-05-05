@@ -1,0 +1,20 @@
+h1 {
+  color: #0203E9;
+}
+
+h2 {
+  color: #EEA91D;
+}
+
+.main-cat {
+  list-style-type: square;
+  color: blue;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.apple {
+  color: red;
+}

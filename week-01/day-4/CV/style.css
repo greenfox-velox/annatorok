@@ -27,7 +27,8 @@ header h1 span{
 
 section {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 1.7em;
   color: #222;
   width: 685px;
   margin-left: 290px;
@@ -37,17 +38,39 @@ h2 {
   text-transform: uppercase;
   font-size: 25px;
   margin-top: 55px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
 }
 
 blockquote {
   font-family: 'Abril Fatface', cursive;
-  width: 715px;
+  width: 700px;
   font-size: 45px;
   background: #444444 url(quote.png) no-repeat;
   text-align: left;
   color: #FFFFFF;
   margin: 55px auto;
   padding: 50px;
+}
+
+h3 + p {
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 1.5em;
+}
+
+section > h4 {
+  font-family: 'Abril Fatface', cursive;
+  font-style: italic;
+}
+
+h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul + li {
+
 }
 
 hr {

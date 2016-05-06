@@ -7,8 +7,8 @@ body, p, h1 {
 
 header {
   font-family: 'Abril Fatface', cursive;
-  background: url(anakin.png);
-  background-size: cover;
+  background: #1781BF url(code1.png) 0px -100px no-repeat;
+  background-size: 60%;
   height: 400px;
   margin-top: 0px;
   margin-bottom: 60px;
@@ -38,26 +38,15 @@ h2 {
   text-transform: uppercase;
   font-size: 25px;
   margin-top: 55px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   letter-spacing: 2px;
-}
-
-blockquote {
-  font-family: 'Abril Fatface', cursive;
-  width: 700px;
-  font-size: 45px;
-  background: #444444 url(quote.png) no-repeat;
-  text-align: left;
-  color: #FFFFFF;
-  margin: 55px auto;
-  padding: 50px;
+  color: #1781BF;
 }
 
 h3 + p {
   font-size: 16px;
   letter-spacing: normal;
   line-height: 1.5em;
-  margin: 30px 0px 40px 0px;
 }
 
 section > h4 {
@@ -71,7 +60,37 @@ h3, h4 {
   padding: 0;
 }
 
+blockquote {
+  font-family: 'Abril Fatface', cursive;
+  width: 700px;
+  font-size: 45px;
+  background: #444444 url(quote.png) no-repeat;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 55px auto;
+  padding: 50px;
+}
+
 hr {
   width: 715px;
   border: 2px solid;
+}
+
+.interests {
+  display: inline;
+  list-style-type: none;
+  margin-right: 40px;
+  padding-left: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF0081;
+}
+
+a:visited {
+  color: purple;
 }

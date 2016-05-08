@@ -7,10 +7,9 @@ body, p, h1 {
 
 header {
   font-family: 'Abril Fatface', cursive;
-  background: url(anakin.png);
-  background-size: cover;
+  background: url(anakin.png) cover;
   height: 400px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 60px;
 }
 

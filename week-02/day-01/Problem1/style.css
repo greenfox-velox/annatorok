@@ -1,3 +1,23 @@
 .box {
+  box-sizing: border-box;
+  width: 370px;
   border: 1px solid;
+  padding: 0 30px 40px;
+  margin-bottom: 50px;
+}
+
+p {
+  border-bottom: 2px solid;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+.img-1 {
+  float: left;
+  margin: 10px;
+}
+
+.img-2 {
+  float: right;
+  margin: 10px;
 }

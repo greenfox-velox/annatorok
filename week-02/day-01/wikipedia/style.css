@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  }
+
+.wrapper {
+  order: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background: red;
+  height: 100px;
+}
+
+.content {
+  background: green;
+  height: 300px; 
+}
+
+.footer {
+  background: blue;
+  height: 100px;
+}
+
+.sidebar {
+  order: 0;
+  background: orange;
+  width: 175px;
+  flex: 1 0 auto;
+}

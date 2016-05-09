@@ -1,14 +1,7 @@
 .box {
   box-sizing: border-box;
   width: 370px;
-  border: 1px solid;
   padding: 0 30px 40px;
-  margin-bottom: 50px;
-}
-
-p {
-  border-bottom: 2px solid;
-  padding-bottom: 20px;
   text-align: justify;
 }
 
@@ -20,4 +13,8 @@ p {
 .img-2 {
   float: right;
   margin: 10px;
+}
+
+hr {
+  border: 1px solid black;
 }

@@ -1,11 +1,13 @@
 body {
   max-width: 620px;
+  margin: 0 auto;
 }
 
 .wrapper {
   width: 100%;
   box-sizing: border-box;
-  margin: 0 auto;
+  padding: 25px 40px 30px 40px;
+
 }
 
 .header {

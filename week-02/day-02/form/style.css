@@ -1,0 +1,29 @@
+.wrapper {
+  background: #DCD6CE;
+  width: 960px;
+  margin: 50px auto;
+}
+
+.form-container {
+  display: flex;
+  height: 100%;
+}
+
+h2 {
+  color: #4A415E;
+  font-size: 16px;
+}
+
+.personal-info-title {
+  background: #948C96;
+  width: 300px;
+  color: #fff;
+  padding: 10px;
+}
+
+.personal-info-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 160px;
+  top: 145px;
+}

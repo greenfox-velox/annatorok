@@ -15,7 +15,7 @@ body {
 
 .content {
   background: green;
-  height: 300px; 
+  height: 300px;
 }
 
 .footer {
@@ -26,6 +26,5 @@ body {
 .sidebar {
   order: 0;
   background: orange;
-  width: 175px;
-  flex: 1 0 auto;
+  flex: 1 0 175px;
 }

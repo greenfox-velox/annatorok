@@ -1,13 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .wrapper {
   background: #DCD6CE;
-  width: 960px;
-  margin: 50px auto;
+  width: 670px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+h2, .form-container, .intro-upload-buttons  {
+  padding: 10px 0 0 25px;
 }
 
 .form-container {
   display: flex;
   height: 100%;
-  justify-content: space-between;
 }
 
 h2 {
@@ -15,36 +23,137 @@ h2 {
   font-size: 16px;
 }
 
-.personal-info-title {
+.personal-info-title, .contact-data-title {
   background: #948C96;
   width: 300px;
   color: #fff;
   padding: 10px;
-}
-
-.personal-info-box {
   box-sizing: border-box;
+  border-radius: 3px;
 }
 
-.birth-gender {
-  display: flex;
+.personal-info-box, .contact-data-box  {
+  width: 50%;
 }
 
-.brand_left {
-  float: left;
+label {
+  color: #574E67;
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 span {
   color: red;
 }
 
-fieldset {
-  border: 0;
+input, select, textarea {
+  border: 1px solid #A8A1A5;
+  border-radius: 5px;
+  box-shadow:inset 0 2px 0 0 #DDDDDE;
+  padding: 10px;
+  margin: 5px 5px 10px 0;
+  box-sizing: border-box;
 }
 
-.contact-data-title {
-  background: #948C96;
+input#name {
   width: 300px;
-  color: #fff;
+}
+
+.birth-gender {
+  display: flex;
+}
+
+.birth, .gender {
+  width: 50%;
+}
+
+.radio-buttons {
   padding: 10px;
+}
+
+input#birth {
+  width: 80px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow:inset 0 2px 0 0 #DDDDDE;
+}
+
+div.gender {
+  margin: 0 10px;
+}
+
+.brand-title {
+  margin-bottom: 10px;
+}
+
+.brand-flex {
+  display: flex;
+}
+
+.brand-left, .brand-right {
+  width: 50%;
+}
+
+.more {
+  color: #BBB6B1;
+  font-size: 14px;
+}
+
+.contact-data-box > input {
+  width: 300px;
+}
+
+select#select {
+  width: 300px;
+  -webkit-appearance:none
+}
+
+textarea {
+  height: 165px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-upload {
+  display: none;
+}
+
+input[type="button"] {
+  width: 220px;
+  background: #F2F2F2;
+}
+
+.terms {
+  padding-top: 20px;
+}
+
+a {
+  color: #574E67;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+button[type="submit"], button[type="reset"] {
+
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+button#save {
+  width: 220px;
+  background: #4E4563;
+  color: #E1DBD1;
+  font-size: 18px;
+}
+
+button#cancel {
+  width: 160px;
+  background: #F2F2F2;
+  color: #574E67;
+  font-size: 14px;
 }

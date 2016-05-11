@@ -6,7 +6,12 @@
   padding: 25px 40px;
 }
 
-.header {
+header, footer {
+  width: 540px;
+  height: 100px;
+}
+
+header {
   background: #00FFFF;
   height: 100px;
   width: 540px;
@@ -25,7 +30,7 @@
   height: 500px;
 }
 
-.content {
+main {
   background: #FE0000;
   width: 300px;
   height: 500px;
@@ -46,8 +51,6 @@
   left: 350px;
 }
 
-.footer {
+footer {
   background: #0000FE;
-  width: 540px;
-  height: 100px;
 }

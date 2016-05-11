@@ -1,21 +1,23 @@
 body {
   display: flex;
+  margin: 0;
   }
 
 .wrapper {
   order: 1;
   width: 100%;
-  margin: 0 auto;
 }
 
 .header {
   background: red;
-  height: 100px;
+  height: 80px;
+  font-size: 14px;
+  position: relative;
 }
 
 .content {
   background: green;
-  height: 300px;
+  height: 100%;
 }
 
 .footer {
@@ -27,4 +29,55 @@ body {
   order: 0;
   background: orange;
   flex: 1 0 175px;
+}
+
+.first-top-nav ul, .second-left-nav ul, .third-right-nav ul {
+  display: flex;
+  margin: 0;
+}
+
+.first-top-nav li, .second-left-nav li, .third-right-nav li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.first-top-nav, .second-left-nav, .third-right-nav {
+  position: absolute;
+}
+
+.first-top-nav {
+  right: 5px;
+}
+
+.second-left-nav {
+  right: 5px;
+  bottom: 5px;
+}
+
+.third-right-nav {
+  left: -35px;
+  bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wiki-logo {
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.bio {
+  width: 270px;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.img-hamilton {
+  text-align: center;
 }

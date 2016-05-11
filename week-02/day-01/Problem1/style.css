@@ -17,6 +17,7 @@
   float: right;
 }
 
-hr {
-  border: 1px solid black;
+.first-lorem, .second-lorem {
+  border-bottom: 2px solid;
+  padding-bottom: 20px;
 }

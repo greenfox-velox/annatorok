@@ -37,7 +37,7 @@ footer {
 }
 
 .first-top-nav li, .second-left-nav li, .third-right-nav li, footer li {
-  list-style: none;
+  list-style-type: none;
   margin-right: 10px;
 }
 
@@ -61,6 +61,7 @@ footer {
 
 a {
   text-decoration: none;
+  list-style-type: none;
 }
 
 .wiki-logo {
@@ -72,6 +73,10 @@ h1, h2, p {
   padding: 10px;
 }
 
+h1, h2 {
+  border-bottom: 1px solid;
+  overflow: hidden;
+}
 
 .content-title {
   text-align: center;

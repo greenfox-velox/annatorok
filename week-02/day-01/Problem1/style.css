@@ -5,14 +5,16 @@
   text-align: justify;
 }
 
+.img-1, .img-2 {
+  margin: 10px;
+}
+
 .img-1 {
   float: left;
-  margin: 10px;
 }
 
 .img-2 {
   float: right;
-  margin: 10px;
 }
 
 hr {

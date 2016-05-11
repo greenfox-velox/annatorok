@@ -8,7 +8,7 @@ body {
   width: 100%;
 }
 
-.header {
+header {
   background: red;
   height: 80px;
   font-size: 14px;
@@ -20,9 +20,8 @@ body {
   height: 100%;
 }
 
-.footer {
-  background: blue;
-  height: 100px;
+footer {
+  background: pink;
 }
 
 .sidebar {
@@ -31,12 +30,13 @@ body {
   flex: 1 0 175px;
 }
 
-.first-top-nav ul, .second-left-nav ul, .third-right-nav ul {
+.first-top-nav ul, .second-left-nav ul, .third-right-nav ul, footer ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
 }
 
-.first-top-nav li, .second-left-nav li, .third-right-nav li {
+.first-top-nav li, .second-left-nav li, .third-right-nav li, footer li {
   list-style: none;
   margin-right: 10px;
 }
@@ -67,17 +67,30 @@ a {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, p {
   margin: 0;
   padding: 10px;
+}
+
+
+.content-title {
+  text-align: center;
+  margin: 0;
 }
 
 .bio {
   width: 270px;
   border: 1px solid;
-  padding: 10px;
+  float: right;
+  clear: right;
 }
 
-.img-hamilton {
+figure {
   text-align: center;
+  margin: 20px;
+}
+
+.content-list {
+  border: 1px solid;
+  width: 125px;
 }

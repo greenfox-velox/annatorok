@@ -23,10 +23,13 @@ body {
   justify-content: space-between;
 }
 
-.sidebar-left {
-  background: #FEA500;
+.sidebar-left, .sidebar-right {
   min-width: 100px;
   height: 500px;
+}
+
+.sidebar-left {
+  background: #FEA500;
 }
 
 .content {
@@ -37,8 +40,6 @@ body {
 
 .sidebar-right {
   background: #81007F;
-  min-width: 100px;
-  height: 500px;
 }
 
 .content-blackbox {

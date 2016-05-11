@@ -39,7 +39,7 @@ label {
   margin-right: 5px;
 }
 
-span {
+.required {
   color: red;
 }
 
@@ -50,6 +50,10 @@ input, select, textarea {
   padding: 10px;
   margin: 5px 5px 10px 0;
   box-sizing: border-box;
+}
+
+.break {
+  display: block;
 }
 
 input#name {

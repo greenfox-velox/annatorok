@@ -16,6 +16,11 @@
   margin: 10px;
 }
 
+header {
+  border-bottom: 2px solid;
+  padding: 10px;
+}
+
 hr {
   border: 1px solid black;
 }
@@ -32,22 +37,24 @@ hr {
   top: 10px;
 }
 
-span {
+.wow {
   color: red;
+  margin: 10px;
 }
 
 .something {
   margin: 300px;
+  border-bottom: 2px solid;
 }
 
 .overlay-box p {
   margin: 5px auto;
-  padding: 10px 20px;
+  padding: 15px 20px;
   position: relative;
   z-index: 10;
 }
 
-.button-box {
+footer {
   position: absolute;
   left: 120px;
   top: 105px
@@ -57,7 +64,7 @@ span {
   background: #AAAAAA;
   border-radius: 10px;
   padding: 5px 5px;
-  margin: 10px 5px;
+  margin: 5px 5px;
   text-align: center;
   display: inline-block;
 }

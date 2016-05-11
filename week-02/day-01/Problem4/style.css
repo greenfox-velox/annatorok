@@ -16,14 +16,16 @@
   margin: 10px;
 }
 
+.first-lorem, .second-lorem {
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+}
+
 header {
   border-bottom: 2px solid;
   padding: 10px;
 }
 
-hr {
-  border: 1px solid black;
-}
 
 .overlay-box {
   box-sizing: border-box;
@@ -34,7 +36,7 @@ hr {
   background: #fff;
   position: absolute;
   left: 180px;
-  top: 10px;
+  top: 30px;
 }
 
 .wow {
@@ -78,7 +80,7 @@ footer {
   text-align: center;
   position: absolute;
   left: 380px;
-  top: 2px;
+  top: 20px;
 }
 
 .wrapper {

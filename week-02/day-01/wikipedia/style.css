@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #f6f6f6;
+  box-sizing: border-box;
   }
 
 .wrapper {
@@ -23,12 +24,20 @@ header {
   margin: 0;
 }
 
-.first-top-nav li, .second-left-nav li, .third-right-nav li {
+.first-top-nav li, .second-left-nav li {
   list-style-type: none;
-  margin-right: 10px;
-  border-right: 1px solid #aaaaaa;
   padding: 5px 5px 0;
-  text-align: center;
+}
+
+.second-left-nav li  {
+  border-right: 1px solid #aaaaaa;
+}
+
+.third-right-nav li {
+  list-style-type: none;
+  border-right: 1px solid #aaaaaa;
+  margin: 0 0 -5px 0;
+  padding: 6px 5px;
 }
 
 .first-top-nav, .second-left-nav, .third-right-nav {
@@ -41,23 +50,36 @@ a {
   list-style-type: none;
 }
 
-.first-top-nav {
-  right: 5px;
-  margin: 10px 0;
-}
-
 .login {
   color: #777777;
+}
+
+.first-top-nav {
+  right: 5px;
+  margin: 10px 10px;
 }
 
 .second-left-nav {
   right: 5px;
   bottom: 5px;
+  line-height: 10px;
+  margin-right: 10px;
+}
+
+input[type=search] {
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 0 5px 5px;
 }
 
 .third-right-nav {
+  box-sizing: border-box;
   left: -35px;
   bottom: 10px;
+}
+
+main {
+  background: #fff;
 }
 
 .content {
@@ -135,6 +157,7 @@ figcaption {
 
 .content-list {
   border: 1px solid #aaa;
+  background: #f9f9f9;
   width: 125px;
   margin: 0 20px;
   font-size: 14px;
@@ -149,6 +172,7 @@ ol, ol > li {
 blockquote {
   font-size: 14px;
   margin: 10px 50px;
+  line-height: 1.5;
 }
 
 .thumb-pic  {
@@ -172,12 +196,12 @@ blockquote {
   padding: 5px;
 }
 
-.awards, .publications, .references {
+.awards-list, .publications-list, .references-list {
   font-size: 14px;
   line-height: 1.5;
 }
 
-.references ol {
+.references-list ol {
   margin: 0 25px 20px;
 }
 
@@ -235,7 +259,7 @@ aside.sidebar h4 {
 
 .side-menu {
   border-bottom: 1px solid #aaaaaa;
-  margin: 0 10px 0;
+  margin: 20px 10px 0;
 }
 
 .side-menu-interaction, .side-menu-tools, .side-menu-print, .side-menu-other {

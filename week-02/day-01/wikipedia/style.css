@@ -18,31 +18,43 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-.first-top-nav ul, .second-left-nav ul, .third-right-nav ul {
+.first-top-nav {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0;
 }
 
-.first-top-nav li, .second-left-nav li {
-  list-style-type: none;
-  padding: 5px 5px 0;
+nav ul li {
+  list-style: none;
+  display: inline;
+  font-size: 12px;
+  padding: 0 5px;
 }
 
-.second-left-nav li  {
-  border-right: 1px solid #aaaaaa;
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-.third-right-nav li {
-  list-style-type: none;
-  border-right: 1px solid #aaaaaa;
-  margin: 0 0 -5px 0;
-  padding: 6px 5px;
+.bottom-nav ul li {
+  border-right: 1px solid #ccc;
+  font-size: 12px;
 }
 
-.first-top-nav, .second-left-nav, .third-right-nav {
-  position: absolute;
-  margin: 0 0 -5px 0;
+.bottom-left-nav ul {
+  padding-left: 5px;
+  margin-top: 18px;
+}
+
+form {
+  display: inline;
+}
+
+input {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 25px;
+  padding: 5px;
 }
 
 a {
@@ -54,28 +66,8 @@ a {
   color: #777777;
 }
 
-.first-top-nav {
-  right: 5px;
-  margin: 10px 10px;
-}
-
-.second-left-nav {
-  right: 5px;
-  bottom: 5px;
-  line-height: 10px;
+.first-top-nav, .bottom-right-nav {
   margin-right: 10px;
-}
-
-input[type=search] {
-  box-sizing: border-box;
-  width: 280px;
-  margin: 0 0 5px 5px;
-}
-
-.third-right-nav {
-  box-sizing: border-box;
-  left: -35px;
-  bottom: 10px;
 }
 
 main {
@@ -160,13 +152,26 @@ figcaption {
   background: #f9f9f9;
   width: 125px;
   margin: 0 20px;
+  padding-bottom: ;: 10px;
   font-size: 14px;
   text-align: left;
 }
 
-ol, ol > li {
-  margin: 0 10px;
-  padding: 0 5px 0;
+ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding: 0 0 5px 0;
+
+}
+
+ol > li {
+  margin: 0 0 3px 10px;
+  padding: 0 0 1px 0;
+}
+
+ol > li::before {
+  content: counters(item, ".");
+  counter-increment: item;
 }
 
 blockquote {

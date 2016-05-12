@@ -2,6 +2,7 @@ body {
   display: flex;
   margin: 0;
   font-family: sans-serif;
+  background: linear-gradient (bottom, #f6f6f6 0%, #f9f9f9 50%, #ffffff 100%);
   }
 
 .wrapper {
@@ -25,6 +26,7 @@ header {
 .first-top-nav li, .second-left-nav li, .third-right-nav li, footer li {
   list-style-type: none;
   margin-right: 10px;
+  border-right: 1px solid #aaaaaa;
 }
 
 .first-top-nav, .second-left-nav, .third-right-nav {
@@ -68,7 +70,7 @@ h1, h2 {
   overflow: hidden;
   font-size: 20px;
   margin: 0 20px 0;
-  padding: 20px 5px 0 0;
+  padding: 20px 5px 5px 0;
   font-family: Georgia, Times, serif;
 }
 
@@ -144,18 +146,41 @@ footer {
   order: 0;
   flex: 1 0 175px;
   border-right: 1px solid blue;
+  box-sizing: border-box;
 }
 
 .wiki-logo {
   text-align: center;
 }
 
+aside.sidebar ul {
+  margin: 5px 0;
+  padding: 0 0 0 20px;
+}
+
 aside.sidebar li {
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 14px;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+aside.sidebar h4 {
+  font-size: 12px;
+  padding: 5px 0 5px;
+  color: #565656;
 }
 
 .side-menu {
-  padding: 10px;
+  border-bottom: 1px solid #aaaaaa;
+  margin: 0 10px 0;
+}
+
+.side-menu-interaction, .side-menu-tools, .side-menu-print, .side-menu-other {
+  border-bottom: 1px solid #aaaaaa;
+  margin: 0 20px 0;
+}
+
+.side-menu-languages {
+  margin: 0 20px 0;
 }

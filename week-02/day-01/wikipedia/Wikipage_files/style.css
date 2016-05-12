@@ -14,21 +14,20 @@ header {
   height: 80px;
   font-size: 12px;
   position: relative;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid blue;
 }
 
-.first-top-nav ul, .second-left-nav ul, .third-right-nav ul {
+.first-top-nav ul, .second-left-nav ul, .third-right-nav ul, footer ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
 
-.first-top-nav li, .second-left-nav li, .third-right-nav li {
+.first-top-nav li, .second-left-nav li, .third-right-nav li, footer li {
   list-style-type: none;
   margin-right: 10px;
   border-right: 1px solid #aaaaaa;
   padding: 5px 5px 0;
-  text-align: center;
 }
 
 .first-top-nav, .second-left-nav, .third-right-nav {
@@ -57,7 +56,7 @@ a {
 
 .third-right-nav {
   left: -35px;
-  bottom: 10px;
+  bottom: 5px;
 }
 
 .content {
@@ -70,20 +69,12 @@ h1, h2, h4, p {
 }
 
 h1, h2 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   overflow: hidden;
+  font-size: 20px;
   margin: 0 20px 0;
   padding: 20px 5px 5px 0;
   font-family: Georgia, Times, serif;
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 28px;
-}
-
-h2 {
-  font-size: 20px
 }
 
 h3 {
@@ -92,21 +83,16 @@ h3 {
 
 h4, p {
   font-size: 14px;
-  font-weight: normal;
-}
-
-p {
-  line-height: 1.5;
 }
 
 .note {
-  padding: 5px 20px;
+  margin-left: 20px;
 }
 
 .bio {
   width: 270px;
-  border: 1px solid #aaa;
-  margin: 15px 20px;
+  border: 1px solid;
+  margin: 0 20px;
   float: right;
   clear: right;
   background: #f9f9f9;
@@ -134,7 +120,7 @@ figcaption {
 }
 
 .content-list {
-  border: 1px solid #aaa;
+  border: 1px solid;
   width: 125px;
   margin: 0 20px;
   font-size: 14px;
@@ -148,7 +134,6 @@ ol, ol > li {
 
 blockquote {
   font-size: 14px;
-  margin: 10px 50px;
 }
 
 .thumb-pic  {
@@ -172,42 +157,18 @@ blockquote {
   padding: 5px;
 }
 
-.awards, .publications, .references {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.references ol {
-  margin: 0 25px 20px;
-}
-
 .quote-quote {
   padding-left: 20px;
 }
 
 footer {
-  border-top: 1px solid #ccc;
-}
-
-footer ul {
-  padding: 0 15px;
-}
-
-nav.footer li {
-  display: inline;
-  padding: 0 5px;
-}
-
-footer li, footer p {
-  font-size: 10px;
-  list-style-type: none;
-  padding: 5px 10px;
+  background: pink;
 }
 
 .sidebar {
   order: 0;
   flex: 1 0 175px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid blue;
   box-sizing: border-box;
 }
 

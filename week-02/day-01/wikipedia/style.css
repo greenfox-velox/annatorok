@@ -1,6 +1,7 @@
 body {
   display: flex;
   margin: 0;
+  font-family: sans-serif;
   }
 
 .wrapper {
@@ -9,25 +10,10 @@ body {
 }
 
 header {
-  background: red;
   height: 80px;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
-}
-
-.content {
-  background: green;
-  height: 100%;
-}
-
-footer {
-  background: pink;
-}
-
-.sidebar {
-  order: 0;
-  background: orange;
-  flex: 1 0 175px;
+  border-bottom: 1px solid blue;
 }
 
 .first-top-nav ul, .second-left-nav ul, .third-right-nav ul, footer ul {
@@ -45,8 +31,17 @@ footer {
   position: absolute;
 }
 
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 .first-top-nav {
   right: 5px;
+}
+
+.logint {
+  color: #777777;
 }
 
 .second-left-nav {
@@ -59,43 +54,108 @@ footer {
   bottom: 5px;
 }
 
-a {
-  text-decoration: none;
-  list-style-type: none;
+.content {
+  height: 100%;
 }
 
-.wiki-logo {
-  text-align: center;
-}
-
-h1, h2, p {
-  margin: 0;
+h1, h2, h4, p {
+  margin: 0 10px;
   padding: 10px;
 }
 
 h1, h2 {
   border-bottom: 1px solid;
   overflow: hidden;
+  font-size: 20px;
+  margin: 0 20px 0;
+  padding: 20px 5px 0 0;
+  font-family: Georgia, Times, serif;
 }
 
-.content-title {
-  text-align: center;
-  margin: 0;
+h3 {
+  margin: 10px 20px;
+}
+
+h4, p {
+  font-size: 14px;
+}
+
+.note {
+  margin-left: 20px;
 }
 
 .bio {
   width: 270px;
   border: 1px solid;
+  margin: 0 20px;
   float: right;
   clear: right;
+  background: #f9f9f9;
+}
+
+th, td {
+  text-align: left;
+  font-size: 12px;
+}
+
+.content-title {
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+  font-size: 14px;
 }
 
 figure {
   text-align: center;
-  margin: 20px;
+  margin: 10px;
+}
+
+figcaption {
+  font-size: 12px;
 }
 
 .content-list {
   border: 1px solid;
   width: 125px;
+  margin: 0 20px;
+  font-size: 14px;
+  text-align: left;
+}
+
+ol, ol > li {
+  margin: 0 10px;
+  padding: 0 5px 0;
+}
+
+blockquote {
+  font-size: 14px;
+}
+
+.quote-quote {
+  padding-left: 20px;
+}
+
+
+footer {
+  background: pink;
+}
+
+.sidebar {
+  order: 0;
+  flex: 1 0 175px;
+  border-right: 1px solid blue;
+}
+
+.wiki-logo {
+  text-align: center;
+}
+
+aside.sidebar li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.side-menu {
+  padding: 10px;
 }

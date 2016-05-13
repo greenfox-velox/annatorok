@@ -55,7 +55,7 @@ nav ul li {
   padding-bottom: 8px;
 }
 
-.bottom-nav ul li::first-child {
+.bottom-nav ul li:first-child {
   margin-left: -5px;
   padding-left: 5px;
   background: white;

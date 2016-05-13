@@ -18,6 +18,10 @@ header {
   background: linear-gradient(to bottom, #ffffff 0%,#ffffff 55%,#ededed 100%);
 }
 
+.login-icon {
+  margin: -3px;
+}
+
 .first-top-nav {
   display: flex;
   justify-content: flex-end;
@@ -38,18 +42,26 @@ nav ul li {
 }
 
 .bottom-nav ul li {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid lightblue;
   font-size: 12px;
   padding-top: 9px;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
 }
 
 .bottom-left-nav ul, .bottom-right-nav ul {
   padding-left: 5px;
+  margin-top: 11px;
 }
 
 .bottom-right-nav ul {
-  margin-top: 4px;
+  margin-top: 5px;
+}
+
+.bottom-nav ul li:first-child {
+  margin-left: -5px;
+  padding-left: 5px;
+  background: white;
+  border-left: 1px solid lightblue;
 }
 
 form {
@@ -58,7 +70,7 @@ form {
 
 input {
   -webkit-appearance: none;
-  width: 200px;
+  width: 300px;
   height: 25px;
   padding: 5px;
 }
@@ -97,7 +109,7 @@ h1, h2 {
   border-bottom: 1px solid #ccc;
   overflow: hidden;
   margin: 0 20px 0;
-  padding: 20px 5px 5px 0;
+  padding: 15px 5px 5px 0;
   font-family: Georgia, Times, serif;
   font-weight: normal;
 }
@@ -111,7 +123,7 @@ h2 {
 }
 
 h3 {
-  margin: 10px 20px;
+  margin: 5px 20px;
 }
 
 h4, p {
@@ -152,13 +164,13 @@ tr {
 .content-title {
   text-align: center;
   margin: 0;
-  padding-top: 5px;
+  padding: 5px 0 0 0;
   font-size: 14px;
 }
 
 figure {
   text-align: center;
-  margin: 10px;
+  margin: 0 0 5px 0;
 }
 
 figcaption {
@@ -170,7 +182,8 @@ figcaption {
   background: #f9f9f9;
   width: 125px;
   margin: 0 20px;
-  padding-bottom: ;: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-size: 14px;
   text-align: left;
 }
@@ -305,10 +318,20 @@ aside.sidebar h4 {
   margin: 0 20px 0;
 }
 
+.side-menu {
+  margin-top: 20px;
+}
+
 .side-menu-interaction {
   border-top: 1px solid #aaa;
 }
 
 .side-menu-languages {
   margin: 0 20px 0;
+}
+
+.download-icon {
+  margin-top: 5px;
+  float: right;
+  clear: right;
 }

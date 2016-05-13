@@ -15,7 +15,7 @@ header {
   height: 80px;
   font-size: 12px;
   position: relative;
-  border-bottom: 1px solid #ccc;
+  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 55%,#ededed 100%);
 }
 
 .first-top-nav {
@@ -59,7 +59,10 @@ input {
 
 a {
   text-decoration: none;
-  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .login {
@@ -72,6 +75,7 @@ a {
 
 main {
   background: #fff;
+  border: 1px solid lightblue;
 }
 
 .content {
@@ -129,6 +133,14 @@ p {
 th, td {
   text-align: left;
   font-size: 12px;
+}
+
+th {
+  vertical-align: top;
+}
+
+tr {
+  line-height: 1.5em;
 }
 
 .content-title {
@@ -211,10 +223,6 @@ blockquote {
   padding-left: 20px;
 }
 
-footer {
-  border-top: 1px solid #ccc;
-}
-
 footer ul {
   padding: 0 15px;
 }
@@ -222,6 +230,11 @@ footer ul {
 nav.footer li {
   display: inline;
   padding: 0 5px;
+}
+
+footer {
+  background: #ededed;
+  padding-bottom: 10px;
 }
 
 footer li, footer p {
@@ -233,8 +246,8 @@ footer li, footer p {
 .sidebar {
   order: 0;
   flex: 1 0 175px;
-  border-right: 1px solid #ccc;
   box-sizing: border-box;
+  background: linear-gradient(to bottom, #ffffff 0%,#f2f2f2 5%,#ededed 100%);
 }
 
 .wiki-logo {
@@ -247,7 +260,6 @@ aside.sidebar ul {
 }
 
 aside.sidebar li {
-  text-decoration: none;
   list-style-type: none;
   font-size: 12px;
   line-height: 1.5;

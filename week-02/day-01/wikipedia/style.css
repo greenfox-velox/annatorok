@@ -22,6 +22,7 @@ header {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 nav ul li {
@@ -39,11 +40,16 @@ nav ul li {
 .bottom-nav ul li {
   border-right: 1px solid #ccc;
   font-size: 12px;
+  padding-top: 9px;
+  padding-bottom: 7px;
 }
 
-.bottom-left-nav ul {
+.bottom-left-nav ul, .bottom-right-nav ul {
   padding-left: 5px;
-  margin-top: 18px;
+}
+
+.bottom-right-nav ul {
+  margin-top: 4px;
 }
 
 form {
@@ -169,18 +175,29 @@ figcaption {
   text-align: left;
 }
 
-ol {
+.content-list ol {
   counter-reset: item;
-  padding: 0 0 5px 15px;
+  padding-left: 5px;
+  list-style-type: none;
+  margin: 0;
 }
 
-ol > li {
-  margin: 0 0 3px 10px;
-  padding: 0 0 1px 0;
+.content-list li {
+  margin: 0 0 5px 5px;
+  padding: 0;
+  counter-increment: item;
+  line-height: 1.4em;
 }
 
-ol li > li:before {
-  content: counters(item, ".") " "; counter-increment: item;
+.content-list li:before {
+  content: counters(item, ".") " ";
+}
+
+.edit {
+  font-size: small;
+  font-weight: normal;
+  line-height: 1em;
+  margin-left: 8px;
 }
 
 blockquote {
@@ -202,6 +219,18 @@ blockquote {
 .thumb-pic img {
   width: 222px;
   border: 1px solid #ccc;
+}
+
+.thumb-pic.legacy {
+  width: 172px;
+  background: #f9f9f9;
+  border: 1px solid #aaa;
+  padding: 3px;
+}
+
+.thumb-pic.legacy img {
+  width: 170px;
+  border: 1px solid #aaa;
 }
 
 .thumb-caption {

@@ -14,7 +14,6 @@ body {
 header {
   height: 80px;
   font-size: 12px;
-  position: relative;
   background: linear-gradient(to bottom, #ffffff 0%,#ffffff 55%,#ededed 100%);
 }
 
@@ -132,7 +131,7 @@ h4, p {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 .note {
@@ -209,14 +208,13 @@ tr {
 .edit {
   font-size: small;
   font-weight: normal;
-  line-height: 1em;
   margin-left: 8px;
 }
 
 blockquote {
   font-size: 14px;
   margin: 10px 50px;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 .thumb-pic  {
@@ -254,7 +252,7 @@ blockquote {
 
 .awards-list, .publications-list, .references-list {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 .references-list ol {
@@ -304,7 +302,7 @@ footer li, footer p {
 aside.sidebar li {
   list-style-type: none;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 aside.sidebar h4 {

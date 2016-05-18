@@ -4,7 +4,7 @@ ah = ['kuty', 'macsk', 'cic']
 i = 0
 
 while i < len(ah):
-    ah[i] += "a"
+    ah[i] = ah[i] + "a"
     i += 1
 
 # while i < len(ah):

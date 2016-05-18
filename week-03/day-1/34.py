@@ -5,7 +5,7 @@ i = 0
 lenag = len(ag)
 
 while i < lenag:
-    ag += [ag[i]]
+    ag = ag + [ag[i]]
     i += 1
 
 print(ag)

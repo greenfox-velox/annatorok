@@ -5,7 +5,7 @@ i = 0
 summa = 0
 
 while i < len(ah):
-    summa += ah[i]
+    summa = summa + ah[i]
     i += 1
 
 print(summa)
@@ -16,6 +16,6 @@ print(summa)
 #     i += 1
 
 for szam in ah:
-    summa += szam
+    summa = summa + szam
 
 print(summa)

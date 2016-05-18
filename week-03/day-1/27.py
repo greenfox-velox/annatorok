@@ -3,9 +3,18 @@ z = 13
 # if less than 10 print 'More!',
 # if more than 20 print 'Less!'
 
+if z > 20:
+    print("Less!")
+elif z > 10:
+    print("Sweet!")
+else:
+    print("More!")
+
+'''
 if z >= 10 and z <= 20:
     print("Sweet!")
 elif z <= 10:
     print("More!")
 elif z >= 20:
     print("Less!")
+'''

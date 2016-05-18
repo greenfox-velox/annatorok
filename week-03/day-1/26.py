@@ -5,6 +5,8 @@ out = 6
 # called out, if not half it
 
 if y[0] == y[-1]:
-    print(out * 2)
+    out *= 2
 else:
-    print(out / 2)
+    out /= 2
+
+print(out)

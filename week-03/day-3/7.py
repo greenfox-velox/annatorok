@@ -8,11 +8,11 @@ def elements_double(input):
 
 print(elements_double(list))
 
-def elements_double(input):
+def elements_value_double(input):
         newList = []
         for i in input:
             newList = newList + [(i * 2)]
             # newList.append(i*2)
         return newList
 
-print(elements_double(list))
+print(elements_value_double(list))

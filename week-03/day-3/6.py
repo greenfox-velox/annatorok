@@ -2,8 +2,8 @@
 list = [1, 2, 3, 4]
 
 def reverse_list(input):
+    newList = []
     for x in input:
-        newList = []
         newList = input[::-1]
 
     return newList

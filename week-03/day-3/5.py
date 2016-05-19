@@ -12,7 +12,7 @@ class Stack:
 
     def size(self):
         x = 0
-        for x in self.elements:
+        for element in self.elements:
             x += 1
         return x
 
@@ -20,13 +20,16 @@ class Stack:
         self.elements = self.elements + [num]
 
     def pop(self):
-        self.elements[-1] = self.elements - self.elements[-1]
-        return self.elements[-1]
+        list = self.elements[-1]
+        self.elements = self.elements[:-1]
+        return list
 
 stackA = Stack()
 
 stackA.push(1)
 stackA.push(5)
 stackA.push(8)
-print(stackA.)
-print(stackA.size())
+stackA.push(13)
+print(stackA.elements)
+print(stackA.pop())
+print(stackA.elements)

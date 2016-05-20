@@ -20,3 +20,16 @@ def triangle(number):
         star += 1
 
 triangle(7)
+
+
+def triangle(lines):
+    for i in range(lines):
+        print('*'*(i+1))
+
+triangle(7)
+
+def triangle(lines):
+    for i in range(lines+1):
+        print('*' * i)
+
+triangle(7)

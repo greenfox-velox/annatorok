@@ -5,7 +5,7 @@
 # it should have a method to add grades
 # it should have a `salute` method that prints it's full name and the average of it's grades as well
 
-class Person():
+class Person:
 
     def __init__(self, first_name, last_name):
         self.first_name = first_name
@@ -17,19 +17,23 @@ class Person():
 
 class Student(Person):
 
-    grades = []
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        # self.first_name = first_name
+        # self.last_name = last_name
+        self.grades = []
+
 
     def add_grade(self, grade):
-        self.grades = self.grades + [grade]
+        self.grades.append(grade)
+        # self.grades = self.grades + [grade]
 
-    def average(self):
+    def salute(self):
+        self.greet()
         total = 0
         for x in self.grades:
             total = total + x
-        return total / len(self.grades)
-
-    def salute(self):
-        print(self.greet(), self.average())
+        print(total / len(self.grades))
 
 
 anna = Person("Anna ", "Török")

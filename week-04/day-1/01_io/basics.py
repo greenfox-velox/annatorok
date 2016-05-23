@@ -38,8 +38,7 @@ def sentence(words):
 def char_codes(string):
     new_List = []
     for x in string:
-        character = ord(x)
-        new_List.append(character)
+        new_List.append(ord(x))
     return new_List
 
 # 6. Create a method that gets a list of integers and gives back a string which characters are created from the numbers used as character codes

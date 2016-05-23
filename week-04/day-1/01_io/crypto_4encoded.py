@@ -4,12 +4,9 @@ def decrypt(file_name):
     text = f.read()
     decoded_list = ''
     for x in text:
-        if x != '\n' and x != ' ':
-            decoded_list += chr(odr(x)-1)
-        else:
+        if x != '\n' or x != ' ':
             decoded_list += x
+        else:
+            decoded_list += chr(ord(x)-1)
     f.close()
     return decoded_list
-
-
-# needs to work on this!

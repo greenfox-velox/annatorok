@@ -22,8 +22,8 @@ for i in range(16):
     x = i * 20
     y = i * 20
     create_line(x, 0)
-    # create_line(x, 300)
-    # create_line(0, y)
+    create_line(x, 300)
+    create_line(0, y)
     create_line(300, y)
 
 master.mainloop()

@@ -9,9 +9,10 @@ canvas_height = 300
 
 master = Tk()
 
+square_size = 10
 canvas = Canvas(master, width=canvas_width, height=canvas_height)
 canvas.pack()
 
-rectangle = canvas.create_rectangle(145, 145, 155, 155)
+rectangle = canvas.create_rectangle(canvas_width/2 - square_size/2,  canvas_height/2 - square_size/2, canvas_width/2 + square_size/2,  canvas_height/2 + square_size/2)
 
 master.mainloop()

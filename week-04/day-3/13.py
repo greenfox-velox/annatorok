@@ -16,7 +16,7 @@ canvas.pack()
 
 
 def create_line(x, y):
-    line = canvas.create_line(x, y, canvas_height/2, canvas_height/2, fill='green')
+    line = canvas.create_line(x, y, canvas_width/2, canvas_height/2, fill='green')
 
 for i in range(16):
     x = i * 20

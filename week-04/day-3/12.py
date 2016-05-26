@@ -40,4 +40,4 @@ for i in range(1,9):
 #             color = 'black'
 #         canvas.create_rectangle(x, y, x+size, y+size, fill=color)
 #
-# master.mainloop()
+master.mainloop()

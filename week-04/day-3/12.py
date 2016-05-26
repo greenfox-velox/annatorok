@@ -24,4 +24,20 @@ for i in range(1,9):
     y += square_size
 
 
-master.mainloop()
+
+# canvas_size = 400
+#
+# canvas = Canvas(master, width = canvas_size, height = canvas_size)
+# canvas.pack()
+#
+# size = canvas_size // 8
+# for i in range(8):
+#     for j in range(8):
+#         x = i * size
+#         y = j * size
+#         color = 'white'
+#         if (i+j) % 2 == 0:
+#             color = 'black'
+#         canvas.create_rectangle(x, y, x+size, y+size, fill=color)
+#
+# master.mainloop()

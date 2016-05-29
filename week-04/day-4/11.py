@@ -12,10 +12,11 @@ def fractal(x, y, size):
     if size < 5:
         pass
     else:
-        fractal(x + size/3, y, size/3)
-        fractal(x, y + size/3, size/3)
-        fractal(x + 2*size/3, y + size/3, size/3)
-        fractal(x + size/3, y + 2*size/3, size/3)
+        s = size // 3
+        fractal(x + size/3, y, s)
+        fractal(x, y + size/3, s)
+        fractal(x + 2*size/3, y + size/3, s)
+        fractal(x + size/3, y + 2*size/3, s)
 
 fractal(0, 0, 600)
 

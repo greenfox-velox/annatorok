@@ -21,7 +21,7 @@ def median(pool):
 
 # Returns true if the param is a vowel
 def is_vovel(char):
-    if char in 'aeiou':
+    if char.lower() in 'aeiouáéíőóúűüö':
         return True
     else:
         return False

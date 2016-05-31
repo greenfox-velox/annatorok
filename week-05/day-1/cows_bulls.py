@@ -6,8 +6,26 @@
 # The CAB object should have a guess method, which returns a string of the guess result
 # All methods, including constructor should be tested
 
+import random
 
-class Cab:
+class Cows_and_Bulls:
 
     def __init__(self, number):
         self.number = number
+        self.cows = 0
+		self.bulls = 0
+        self.counter = 0
+        self.state = 'playing'
+
+
+    def correct_number(self):
+        self.correct_number = random.randint(1000,9999)
+        return correct_number
+
+    def guess_number(self, guess):
+        if len(guess) < 4 or len(guess) > 4:
+            state = 'finished'
+            return False
+        else:
+            self.guess = guess
+            self.counter += 1

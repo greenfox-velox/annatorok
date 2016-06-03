@@ -17,12 +17,13 @@ class Todo():
         print(' -l Lists all the tasks    ')
         print(' -a Adds a new tasks       ')
         print(' -r Removes a task         ')
-        print(' -c Completes a task       ')
+        print(' -c Checks a task          ')
+        print(' -u Unchecks a task        ')
         print('                           ')
         print('===========================')
 
     def ok_argument(self):
-        arguments = ['-l', '-a', '-r', '-c']
+        arguments = ['-l', '-a', '-r', '-c', '-u']
         if sys.argv[1] not in arguments:
             print('Unsupported argument')
             self.main_menu()
@@ -45,6 +46,12 @@ class Todo():
         else:
             self.check_task()
 
+    def controller_u(self):
+        if len(sys.argv) == 2:
+            print('Unable to uncheck: No index is provided')
+        else:
+            self.uncheck_task()
+
     def controller_r(self):
         if len(sys.argv) == 2:
             print('Unable to remove: No index is provided')
@@ -65,6 +72,8 @@ class Todo():
                 self.controller_r()
             elif sys.argv[1] == '-c':
                 self.controller_c()
+            elif sys.argv[1] == '-u':
+                self.controller_u()
 
     def load_list(self):
         f = open(self.file_name)
@@ -112,6 +121,28 @@ class Todo():
                 print('Unable to check: Index is not a number')
         except IndexError:
                 print('Unable to check: Index is out of bound')
+
+    def uncheck_task(self):
+        f = open(self.file_name)
+        uncheck_task = csv.reader(f, delimiter = ';')
+        output = []
+        try:
+            task_number = int(sys.argv[2])
+            for i in uncheck_task:
+                output.append(i)
+            if output[task_number-1][0] == 'True':
+                output[task_number-1][0] = 'False'
+            elif output[task_number-1][0] == 'False':
+                print('Task already unchecked!')
+            f.close()
+            f = open(self.file_name, 'w')
+            for i in output:
+                f.write(i[0] + ';' + i[1] + '\n')
+            f.close()
+        except ValueError:
+                print('Unable to uncheck: Index is not a number')
+        except IndexError:
+                print('Unable to uncheck: Index is out of bound')
 
     def remove_from_list(self, remove_n_task):
         f = open(self.file_name)

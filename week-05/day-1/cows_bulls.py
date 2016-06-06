@@ -10,8 +10,7 @@ import random
 
 class Cows_and_Bulls:
 
-    def __init__(self, number):
-        self.number = number
+    def __init__(self):
         self.cows = 0
 		self.bulls = 0
         self.counter = 0
@@ -29,3 +28,6 @@ class Cows_and_Bulls:
         else:
             self.guess = guess
             self.counter += 1
+
+    def guess():
+        return

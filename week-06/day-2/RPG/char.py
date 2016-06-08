@@ -6,6 +6,7 @@ class Character():
     def __init__(self, x, y, canvas):
         self.canvas = canvas
         self.random_roll_dice = self.roll_dice()
+        # self.stat = self.stats()
         self.tile_size = 72
         self.x = x
         self.y = y
@@ -17,64 +18,82 @@ class Character():
         random_roll_dice = randint(1, 6)
         return random_roll_dice
 
+    # def stats(self):
+    #     stat = self.name + '(Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
+    #     return stat
+
 class Hero(Character):
     def __init__(self, canvas, x, y, tile_map):
         super().__init__(canvas,x, y)
         self.hero_image = PhotoImage(file = 'images/hero-down.gif')
         self.tile_map = tile_map
-        self.max_health = 100
-        self.current_health = max_health
+        self.max_hp = 100
+        self.current_hp = 100
         self.level = 1
+        # self.name = 'Hero'
         self.hp = 20 + (self.random_roll_dice * self.random_roll_dice * self.random_roll_dice)
-        # self.current_hp =
         self.dp = self.random_roll_dice * self.random_roll_dice
-        self.sp = 5 + (self.random_roll_dice)
+        self.sp = 5 + self.random_roll_dice
+        self.stat = 'Hero + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
+
 
     def draw_char(self):
         self.create_char(self.hero_image)
 
-    def move_down(self, event):
-        if self.tile_map[self.y+1][self.x] == 0:
+    def move_down(self):
+        if self.check_edge(self.y+1, self.x):
             self.hero_image = PhotoImage(file = 'images/hero-down.gif')
-            if self.y < 9:
+            if self.check_floor(self.y+1, self.x):
                 self.y += 1
-            self.draw_char()
+        self.draw_char()
 
-    def move_up(self, event):
-        if self.tile_map[self.y-1][self.x] == 0:
+    def move_up(self):
+        if self.check_edge(self.y-1, self.x):
             self.hero_image = PhotoImage(file = 'images/hero-up.gif')
-            if self.y > 0:
-                self.y = self.y - 1
-            self.draw_char()
+            if self.check_floor(self.y-1, self.x):
+                self.y -= 1
+        self.draw_char()
 
-    def move_right(self, event):
-        if self.tile_map[self.y][self.x+1] == 0:
+    def move_right(self):
+        if self.check_edge(self.y, self.x+1):
             self.hero_image = PhotoImage(file = 'images/hero-right.gif')
-            if self.x < 9:
-                self.x = self.x + 1
-            self.draw_char()
+            if self.check_floor(self.y, self.x+1):
+                self.x += 1
+        self.draw_char()
 
-    def move_left(self, event):
-        if self.tile_map[self.y][self.x-1] == 0:
+    def move_left(self):
+        if self.check_edge(self.y, self.x-1):
             self.hero_image = PhotoImage(file = 'images/hero-left.gif')
-            if self.x > 0:
-                self.x = self.x - 1
-            self.draw_char()
+            if self.check_floor(self.y, self.x-1):
+                self.x -= 1
+        self.draw_char()
+
+    def check_edge(self, y, x):
+        return y <= 9 and y >= 0 and x >= 0 and x <= 9
+
+    def check_floor(self, y, x):
+        return self.tile_map[y][x] == 0
 
     # def attack(self):
+
+    # def level_up(self):
+	# 	self.max_hp += self.d6()
+	# 	self.dp += self.d6()
+	# 	self.sp += self.d6()
 
 class Boss(Character):
 
     def __init__(self, canvas, x, y):
         super().__init__(canvas,x, y)
         self.boss_image = PhotoImage(file = 'images/boss.gif')
-        self.max_health = 100
-        self.current_health = max_health
+        self.max_hp = 100
+        self.current_hp = 100
         self.level = 1
+        # self.name = 'Boss'
         self.hp = 2 * ((self.level * self.random_roll_dice) + self.random_roll_dice)
-        # self.current_hp =
         self.dp = self.level/2 * (self.random_roll_dice + (self.random_roll_dice/2))
         self.sp = self.level * (self.random_roll_dice + self.level)
+        self.stat = 'Boss + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
 
     def draw_char(self):
         self.create_char(self.boss_image)
@@ -83,13 +102,15 @@ class Skeleton(Character):
     def __init__(self, canvas, x, y):
         super().__init__(canvas,x, y)
         self.skeleton_image = PhotoImage(file = 'images/skeleton.gif')
-        self.max_health = 100
-        self.current_health = max_health
+        self.max_hp = 100
+        self.current_hp = 100
         self.level = 1
+        # self.name = 'Skeleton'
         self.hp = 2 * self.level * self.random_roll_dice
-        # self.current_hp =
         self.dp = self.level/2 * self.random_roll_dice
         self.sp = self.level * self.random_roll_dice
+        self.stat = 'Skeleton + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
+
 
     def draw_char(self):
         self.create_char(self.skeleton_image)

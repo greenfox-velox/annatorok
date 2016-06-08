@@ -51,3 +51,16 @@ class Gameboard():
     #
     #     if press == 'space':
     #         self.attack()
+
+# class Stats():
+#
+#     def __init__(self, canvas):
+#         self.canvas = canvas
+#
+#     def print_stats(self):
+#         self.canvas.create_rectangle()
+#
+#     def draw_text(self):
+#         text = Text(root, height=2, width=30)
+#         text.pack()
+#         stat =

@@ -6,8 +6,7 @@ class Play():
 
     def __init__(self):
         master = Tk()
-        canvas_size = 720
-        canvas = Canvas(master, width = canvas_size, height = canvas_size)
+        canvas = Canvas(master, width = 1000, height = 720)
 
         game = Gameboard(canvas)
         game.draw_gameboard()
@@ -23,8 +22,14 @@ class Play():
         boss = Boss(0, 5, canvas)
         boss.draw_char()
 
-        skeleton = Skeleton(4, 5, canvas)
+        skeleton = Skeleton(6, 8, canvas)
         skeleton.draw_char()
+
+        skeleton2 = Skeleton(0, 7, canvas)
+        skeleton2.draw_char()
+
+        skeleton3 = Skeleton(4, 5, canvas)
+        skeleton3.draw_char()
 
         canvas.pack()
         master.mainloop()

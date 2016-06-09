@@ -1,6 +1,7 @@
 from char import *
 from game_map import *
 from tile import *
+from stats import *
 
 class Game():
 
@@ -12,10 +13,8 @@ class Game():
         self.skeleton = Skeleton(6, 8)
         self.skeleton2 = Skeleton(0, 7)
         self.skeleton3 = Skeleton(4, 5)
-        # self.stat = Stat(canvas, hero)
+        self.stat = Stat(self.hero)
 
-    #
-    #
     def keyPressed(self, event):
         if event.keysym == 'Down':
             if self.game_map.check_edge(self.hero.x, self.hero.y+1) and self.game_map.check_floor(self.hero.x, self.hero.y+1):
@@ -42,4 +41,4 @@ class Game():
         self.skeleton.draw_char(self.canvas)
         self.skeleton2.draw_char(self.canvas)
         self.skeleton3.draw_char(self.canvas)
-        # self.stat.draw_text()
+        self.stat.draw_text(self.canvas)

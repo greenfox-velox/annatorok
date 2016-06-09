@@ -16,13 +16,13 @@ class Hero(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.hero_image = PhotoImage(file = 'images/hero-down.gif')
-        # self.max_hp = 100
-        # self.current_hp = 100
-        # self.level = 1
-        # self.name = 'Hero'
-        # self.hp = 20 + self.d6 * self.d6 * self.d6
-        # self.dp = self.d6 * self.d6
-        # self.sp = 5 + self.d6
+        self.max_hp = 100
+        self.current_hp = 100
+        self.level = 1
+        self.name = 'Hero'
+        self.hp = 20 + self.d6 * self.d6 * self.d6
+        self.dp = self.d6 * self.d6
+        self.sp = 5 + self.d6
 
     def draw_char(self, canvas):
         self.create_char(self.hero_image, canvas)
@@ -56,13 +56,13 @@ class Boss(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.boss_image = PhotoImage(file = 'images/boss.gif')
-        # self.max_hp = 100
-        # self.current_hp = 100
-        # self.level = 1
-        # self.name = 'Boss'
-        # self.hp = 2 * ((self.level * self.d6) + self.d6)
-        # self.dp = self.level/2 * (self.d6 + (self.d6/2))
-        # self.sp = self.level * (self.d6 + self.level)
+        self.max_hp = 100
+        self.current_hp = 100
+        self.level = 1
+        self.name = 'Boss'
+        self.hp = 2 * ((self.level * self.d6) + self.d6)
+        self.dp = self.level/2 * (self.d6 + (self.d6/2))
+        self.sp = self.level * (self.d6 + self.level)
 
     def draw_char(self, canvas):
         self.create_char(self.boss_image, canvas)
@@ -71,13 +71,13 @@ class Skeleton(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.skeleton_image = PhotoImage(file = 'images/skeleton.gif')
-        # self.max_hp = 100
-        # self.current_hp = 100
-        # self.level = 1
-        # self.name = 'Skeleton'
-        # self.hp = 2 * self.level * self.d6
-        # self.dp = self.level/2 * self.d6
-        # self.sp = self.level * self.d6
+        self.max_hp = 100
+        self.current_hp = 100
+        self.level = 1
+        self.name = 'Skeleton'
+        self.hp = 2 * self.level * self.d6
+        self.dp = self.level/2 * self.d6
+        self.sp = self.level * self.d6
 #
     def draw_char(self, canvas):
         self.create_char(self.skeleton_image, canvas)

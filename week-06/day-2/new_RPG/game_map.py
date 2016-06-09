@@ -37,17 +37,8 @@ class Map():
         for tile in self.map:
             tile.draw(canvas)
 
-    def check_edge(self, y, x):
+    def check_edge(self, x, y):
         return y <= 9 and y >= 0 and x >= 0 and x <= 9
 
-    def check_floor(self, y, x):
-        return self.tile_map[x][y] == 0
-
-	# def is_valid_move(self):
-    	# if (self.position['x'], self.position['y']) in self.wall.position:
-    	# 	return False
-    	# if self.position['x'] not in list(range(10)):
-    	# 	return False
-    	# if self.position['y'] not in list(range(10)):
-    	# 	return False
-    	# return True
+    def check_floor(self, x, y):
+        return self.tile_map[y][x] == 0

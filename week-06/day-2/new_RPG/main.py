@@ -12,7 +12,7 @@ def main():
     game = Game(canvas)
     game.draw_all()
 
-    # master.bind('<KeyPress>', game.keyPressed)
+    master.bind('<KeyPress>', game.keyPressed)
 
     canvas.pack()
     master.mainloop()

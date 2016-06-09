@@ -27,33 +27,21 @@ class Hero(Character):
     def draw_char(self, canvas):
         self.create_char(self.hero_image, canvas)
 
-    # def move_down(self):
-    #     if self.hero.check_edge(self.y+1, self.x):
-    #         self.hero_image = PhotoImage(file = 'images/hero-down.gif')
-    #         if self.hero.check_floor(self.y+1, self.x):
-    #             self.y += 1
-    #     self.draw_char()
-    #
-    # def move_up(self):
-    #     if self.check_edge(self.y-1, self.x):
-    #         self.hero_image = PhotoImage(file = 'images/hero-up.gif')
-    #         if self.check_floor(self.y-1, self.x):
-    #             self.y -= 1
-    #     self.draw_char()
-    #
-    # def move_right(self):
-    #     if self.check_edge(self.y, self.x+1):
-    #         self.hero_image = PhotoImage(file = 'images/hero-right.gif')
-    #         if self.check_floor(self.y, self.x+1):
-    #             self.x += 1
-    #     self.draw_char()
-    #
-    # def move_left(self):
-    #     if self.check_edge(self.y, self.x-1):
-    #         self.hero_image = PhotoImage(file = 'images/hero-left.gif')
-    #         if self.check_floor(self.y, self.x-1):
-    #             self.x -= 1
-    #     self.draw_char()
+    def move_down(self):
+        self.hero_image = PhotoImage(file = 'images/hero-down.gif')
+        self.y += 1
+
+    def move_up(self):
+        self.hero_image = PhotoImage(file = 'images/hero-up.gif')
+        self.y -= 1
+
+    def move_right(self):
+        self.hero_image = PhotoImage(file = 'images/hero-right.gif')
+        self.x += 1
+
+    def move_left(self):
+        self.hero_image = PhotoImage(file = 'images/hero-left.gif')
+        self.x -= 1
 
 
     # def attack(self):
@@ -76,8 +64,8 @@ class Boss(Character):
         # self.dp = self.level/2 * (self.d6 + (self.d6/2))
         # self.sp = self.level * (self.d6 + self.level)
 
-    def draw_char(self):
-        self.create_char(self.boss_image)
+    def draw_char(self, canvas):
+        self.create_char(self.boss_image, canvas)
 
 class Skeleton(Character):
     def __init__(self, x, y):
@@ -91,5 +79,5 @@ class Skeleton(Character):
         # self.dp = self.level/2 * self.d6
         # self.sp = self.level * self.d6
 #
-    def draw_char(self):
-        self.create_char(self.skeleton_image)
+    def draw_char(self, canvas):
+        self.create_char(self.skeleton_image, canvas)

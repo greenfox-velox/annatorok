@@ -17,11 +17,10 @@ columns = 10
 
 class Gameboard():
 
-    def __init__(self, canvas, hero, stat):
+    def __init__(self, canvas, hero):
         self.canvas = canvas
         self.m = []
         self.hero = hero
-        self.stat = hero.stat
 
     def create_matrix_element(self, tile_map, rows, columns):
         for x in range(rows):
@@ -39,9 +38,6 @@ class Gameboard():
         for i in self.m:
             i.draw()
 
-    def draw_text(self, stat):
-        self.canvas.create_text(760, 100, x + 200, y + 100, text = self.hero.stat)
-
     def keyPressed(self, event):
         if event.keysym == 'Down':
             self.hero.move_down()
@@ -51,3 +47,15 @@ class Gameboard():
             self.hero.move_left()
         if event.keysym == 'Up':
             self.hero.move_up()
+
+class Stat():
+
+    def __init__(self, canvas, hero):
+        self.canvas = canvas
+        self.hero = hero
+        self.x = 760
+        self.y = 100
+
+    def draw_text(self):
+        self.stat = self.hero.name + '(Level ' + str(self.hero.level) + ') HP: ' + str(self.hero.hp) + '/' + str(self.hero.max_hp) + ' | DP: ' + str(self.hero.dp) + ' | SP: ' + str(self.hero.sp)
+        self.canvas.create_text(self.x, self.y, text = self.stat)

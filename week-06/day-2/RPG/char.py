@@ -30,13 +30,10 @@ class Hero(Character):
         self.max_hp = 100
         self.current_hp = 100
         self.level = 1
-        # self.name = 'Hero'
+        self.name = 'Hero'
         self.hp = 20 + (self.random_roll_dice * self.random_roll_dice * self.random_roll_dice)
         self.dp = self.random_roll_dice * self.random_roll_dice
         self.sp = 5 + self.random_roll_dice
-        self.stat = 'Hero + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
-
-
     def draw_char(self):
         self.create_char(self.hero_image)
 
@@ -89,11 +86,11 @@ class Boss(Character):
         self.max_hp = 100
         self.current_hp = 100
         self.level = 1
-        # self.name = 'Boss'
+        self.name = 'Boss'
         self.hp = 2 * ((self.level * self.random_roll_dice) + self.random_roll_dice)
         self.dp = self.level/2 * (self.random_roll_dice + (self.random_roll_dice/2))
         self.sp = self.level * (self.random_roll_dice + self.level)
-        self.stat = 'Boss + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
+        # self.stat = 'Boss + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
 
     def draw_char(self):
         self.create_char(self.boss_image)
@@ -105,11 +102,11 @@ class Skeleton(Character):
         self.max_hp = 100
         self.current_hp = 100
         self.level = 1
-        # self.name = 'Skeleton'
+        self.name = 'Skeleton'
         self.hp = 2 * self.level * self.random_roll_dice
         self.dp = self.level/2 * self.random_roll_dice
         self.sp = self.level * self.random_roll_dice
-        self.stat = 'Skeleton + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
+        # self.stat = 'Skeleton + (Level ' + str(self.level) + ') HP: ' + str(self.hp) + '/' + str(self.max_hp) + ' | DP: ' + str(self.dp) + ' | SP: ' + str(self.sp)
 
 
     def draw_char(self):

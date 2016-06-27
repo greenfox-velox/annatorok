@@ -1,0 +1,11 @@
+{
+  "name": "anna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "test": "'Hello word'"
+  },
+  "author": "",
+  "license": "ISC"
+}

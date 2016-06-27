@@ -5,7 +5,7 @@
 var factor = 1;
 
 function factorial(input) {
-  for (var i = 0; i < input.length+1; i++) {
+  for (var i = 1; i < input+1; i++) {
     factor *= i;
   }
   return factor;

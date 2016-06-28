@@ -19,3 +19,12 @@ function prime(inputArr) {
   });
 }
 console.log(prime(numbers));
+
+
+// var numbers = [2, 5, 11, 29].every(function(e) {
+//   var a = Math.random() * 10;
+//     return e / a !== 0;
+//   //  console.log(e);
+// });
+//
+// console.log(numbers);

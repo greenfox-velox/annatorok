@@ -10,5 +10,5 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 
 // paragraphs.forEach(function (e) {
-//   e.paragraphs.textContent = last_paragraph.textContent;
+//   e.textContent = last_paragraph.textContent;
 // })

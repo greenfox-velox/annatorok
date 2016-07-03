@@ -1,4 +1,11 @@
-#Welcome to my Github page!
+# Welcome to my Github page
+
+---
+You can follow my coding process on (http://i67.tinypic.com/v7ql5i.jpg "CodeWars")] (https://www.codewars.com/users/annatorok)
+
+Endorse my skills on (http://i67.tinypic.com/2j43mus.jpg "LinkedIn") (https://hu.linkedin.com/in/annatorok)
+
+---
 
 # [GreenFox Academy](http://www.greenfoxacademy.com/) ![Green Fox logo](https://tinyurl.com/hgzse3j "Logo")
 ## Velox class
@@ -27,9 +34,9 @@
 
 *Project: Build a CV page*
 
-[CV](http://annatorok.github.io/My-CV/index.html "CV of Anna Török")
+[**Live CV**](http://annatorok.github.io/My-CV/index.html "CV of Anna Török")
 
-[CV Anakin template](http://annatorok.github.io/Anakin-CV/index.html "CV of Anakin")
+[**Live CV Anakin template**](http://annatorok.github.io/Anakin-CV/index.html "CV of Anakin")
 
 ## Week 2:
 
@@ -37,9 +44,9 @@
 
 *Project: Build a Wikipedia Page*
 
-* [Wikipedia version of mine](http://annatorok.github.io/Wikipedia/index.html)
+* [**Live Wikipedia version of mine**](http://annatorok.github.io/Wikipedia/index.html)
 
-* [Form](http://annatorok.github.io/Form/index.html)
+* [** Live Form**](http://annatorok.github.io/Form/index.html)
 
 ## Week 3
 

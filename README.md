@@ -1,13 +1,14 @@
 # Welcome to my Github page
 
 ---
-You can follow my coding process on (http://i67.tinypic.com/v7ql5i.jpg "CodeWars")] (https://www.codewars.com/users/annatorok)
+You can follow my coding process on ![CodeWars logo](http://i67.tinypic.com/v7ql5i.jpg "CodeWars")] (https://www.codewars.com/users/annatorok)
 
-Endorse my skills on (http://i67.tinypic.com/2j43mus.jpg "LinkedIn") (https://hu.linkedin.com/in/annatorok)
+Endorse my skills on ![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "LinkedIn") (https://hu.linkedin.com/in/annatorok)
 
 ---
 
 # [GreenFox Academy](http://www.greenfoxacademy.com/) ![Green Fox logo](https://tinyurl.com/hgzse3j "Logo")
+
 ## Velox class
 
 [Syllabus](https://github.com/annatorok/velox-syllabus)

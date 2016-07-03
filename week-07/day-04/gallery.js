@@ -47,6 +47,7 @@ mainPictureContainer.appendChild(picture);
 
 // switch main image with other images in the gallery list
 var currentImage = 0;
+var title = document.querySelector('p');
 function getNewPic() {
   var mainImage = document.querySelector('.main-picture-container img');
   mainImage.setAttribute('src', images[currentImage].path);
@@ -85,7 +86,6 @@ prev.addEventListener('click', function () {
 
 // create and insert thumbnail images
 var thumbnailDiv = document.querySelector('.thumbnails-gallery');
-var title = document.querySelector('p');
 
 images.forEach(function (e) {
   var thumbnailImages = document.createElement('img');
@@ -98,7 +98,7 @@ images.forEach(function (e) {
   });
 });
 
-function addtoThumbnails(i, thumbnailImages) {
+function addToThumbnails(i, thumbnailImages) {
   thumbnailImages.addEventListener('click', function () {
     picture.setAttribute('src', images[i].path);
     title.textContent = images[i].title;
@@ -107,12 +107,12 @@ function addtoThumbnails(i, thumbnailImages) {
 
 // thumbnail slide through images
 var thumbImage = 0;
-function slide() {
+function addSlide() {
   for (var i = thumbImage; i < thumbImage + 4; i++) {
     var thumbnailImages = document.createElement('img');
     thumbnailImages.setAttribute('src', images[i].path);
     thumbnailDiv.appendChild(thumbnailImages);
-    addtoThumbnails(i, thumbnailImages);
+    addToThumbnails(i, thumbnailImages);
   }
 }
 
@@ -134,12 +134,12 @@ var thumbNext = document.querySelector('.thumb-next-bt');
 thumbNext.addEventListener('click', function () {
   thumbnailDiv.innerHTML = '';
   nextThumb();
-  slide();
+  addSlide();
 });
 
 var thumbPrev = document.querySelector('.thumb-prev-bt');
 thumbPrev.addEventListener('click', function () {
   thumbnailDiv.innerHTML = '';
   prevThumb();
-  slide();;
+  addSlide();;
 });

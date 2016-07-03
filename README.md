@@ -26,12 +26,12 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 * [Week 3](https://docs.google.com/presentation/d/1N9F6SlV98U13RViOs2gJ2mghBYxQTT8AZS3ugNCTnaQ/edit?usp=sharing)
 * [Week 4](https://docs.google.com/presentation/d/1O8a3FkCNyWuMd9q9O1zCz1zqTn19nOn4Hi1piUrBqy4/edit?usp=sharing)
 * [Week 5](https://docs.google.com/presentation/d/1tbA-rMwy28KYGNSLAc_xsTSRG7qp0OnThzMkjNa1AHU/edit?usp=sharing)
-* [Week 6] (no demo)
+* Week 6 - no demo
 * [Week 7](https://docs.google.com/presentation/d/1W4HGgpGMjIjjzdYY-5D-pwZOAyBiENLR-_4xbXE2tgE/edit?usp=sharing)
 
 ## Week 1
 
-[**week 1 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-01)
+[**Week 1 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-01)
 
 *Project: Build a CV page*
 
@@ -41,17 +41,17 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 ## Week 2:
 
-[**week 2 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-02)  
+[**Week 2 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-02)  
 
 *Project: Build a Wikipedia Page*
 
 * [**Live Wikipedia version of mine**](http://annatorok.github.io/Wikipedia/index.html)
 
-* [** Live Form**](http://annatorok.github.io/Form/index.html)
+* [**Live Form**](http://annatorok.github.io/Form/index.html)
 
 ## Week 3
 
-[**week 3 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-03)
+[**Week 3 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-03)
 
 *Project: Find palindromes in a string*
 
@@ -61,7 +61,7 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 ## Week 4
 
-[**week 4 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-04)
+[**Week 4 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-04)
 
 *Project: Draw a Hexagon and a Triangle fractal with Tkinter*
 

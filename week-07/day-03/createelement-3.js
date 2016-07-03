@@ -21,5 +21,5 @@ var new_list = ['apple', 'bubble', 'cat', 'green fox'];
 for (var i = 0; i < new_list.length; i++) {
   var create_listItems = document.createElement('li');
   asteroidList.appendChild(create_listItems);
-  create_listItems.innerHTML = new_list[i];
+  create_listItems.textContent = new_list[i];
 }

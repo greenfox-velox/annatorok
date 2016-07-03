@@ -6,51 +6,63 @@ class Character():
     def __init__(self, x, y):
         self.d6 = randint(1, 6)
         self.tile_size = 72
+        self.canvas_start = 5
         self.x = x
         self.y = y
 
-    def create_char(self, img, canvas):
-        canvas.create_image(5 + self.x * self.tile_size, 5 + self.y * self.tile_size, image=img, anchor = NW)
+    def create_char(self, image, canvas):
+        canvas.create_image(self.canvas_start + self.x * self.tile_size, self.canvas_start + self.y * self.tile_size, image=image, anchor = NW)
+
+    # def damage(self, strike_value):
+    #     self.current_hp = self.current_hp - strike_value
+    #     if self.current_hp < 0 :
+    #         self.die()
+    #
+    # def die(self):
+    #     self.current_hp > 0
 
 class Hero(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.hero_image = PhotoImage(file = 'images/hero-down.gif')
-        self.max_hp = 100
-        self.current_hp = 100
+        self.max_hp = 38
+        self.current_hp = self.max_hp
         self.level = 1
         self.name = 'Hero'
         self.hp = 20 + self.d6 * self.d6 * self.d6
         self.dp = self.d6 * self.d6
         self.sp = 5 + self.d6
-        self.images = {'Down' : PhotoImage(file = 'images/hero-down.gif'), 'Up' : PhotoImage(file = 'images/hero-up.gif'), 'Left' : PhotoImage(file = 'images/hero-left.gif'), 'Right' : PhotoImage(file = 'images/hero-right.gif')}
 
     def draw_char(self, canvas):
         self.create_char(self.hero_image, canvas)
 
-    def move(self, x, y, img):
-        self.x = x
-        self.y = y
-        self.hero_image = img
+    def move_down(self):
+        self.turn_down()
+        self.y += 1
 
-    # def move_down(self):
-    #     self.hero_image = PhotoImage(file = 'images/hero-down.gif')
-    #     self.y += 1
+    def move_up(self):
+        self.turn_up()
+        self.y -= 1
 
-    # def move_up(self):
-    #     self.hero_image = PhotoImage(file = 'images/hero-up.gif')
-    #     self.y -= 1
-    #
-    # def move_right(self):
-    #     self.hero_image = PhotoImage(file = 'images/hero-right.gif')
-    #     self.x += 1
-    #
-    # def move_left(self):
-    #     self.hero_image = PhotoImage(file = 'images/hero-left.gif')
-    #     self.x -= 1
+    def move_right(self):
+        self.turn_right()
+        self.x += 1
 
+    def move_left(self):
+        self.turn_left()
+        self.x -= 1
 
-    # def attack(self):
+    def turn_down(self):
+        self.hero_image = PhotoImage(file = 'images/hero-down.gif')
+
+    def turn_up(self):
+        self.hero_image = PhotoImage(file = 'images/hero-up.gif')
+
+    def turn_right(self):
+        self.hero_image = PhotoImage(file = 'images/hero-right.gif')
+
+    def turn_left(self):
+        self.hero_image = PhotoImage(file = 'images/hero-left.gif')
 
     # def level_up(self):
 	# 	self.max_hp += self.d6()
@@ -62,8 +74,8 @@ class Boss(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.boss_image = PhotoImage(file = 'images/boss.gif')
-        self.max_hp = 100
-        self.current_hp = 100
+        self.max_hp = 14
+        self.current_hp = self.max_hp
         self.level = 1
         self.name = 'Boss'
         self.hp = 2 * ((self.level * self.d6) + self.d6)
@@ -77,13 +89,13 @@ class Skeleton(Character):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.skeleton_image = PhotoImage(file = 'images/skeleton.gif')
-        self.max_hp = 100
-        self.current_hp = 100
+        self.max_hp = 8
+        self.current_hp = self.max_hp
         self.level = 1
         self.name = 'Skeleton'
         self.hp = 2 * self.level * self.d6
         self.dp = self.level/2 * self.d6
         self.sp = self.level * self.d6
-#
+
     def draw_char(self, canvas):
         self.create_char(self.skeleton_image, canvas)

@@ -16,22 +16,19 @@ class Game():
         self.stat = Stat(self.hero)
 
     def keyPressed(self, event):
+        next_x = self.hero.x
+        next_y = self.hero.y
         if event.keysym == 'Down':
-            if self.game_map.check_edge(self.hero.x, self.hero.y+1) and self.game_map.check_floor(self.hero.x, self.hero.y+1):
-                self.hero.move_down()
-                self.hero.draw_char(self.canvas)
-        if event.keysym == 'Right':
-            if self.game_map.check_edge(self.hero.x+1, self.hero.y) and self.game_map.check_floor(self.hero.x+1, self.hero.y):
-                self.hero.move_right()
-                self.hero.draw_char(self.canvas)
-        if event.keysym == 'Left':
-            if self.game_map.check_edge(self.hero.x-1, self.hero.y) and self.game_map.check_floor(self.hero.x-1, self.hero.y):
-                self.hero.move_left()
-                self.hero.draw_char(self.canvas)
-        if event.keysym == 'Up':
-            if self.game_map.check_edge(self.hero.x, self.hero.y-1) and self.game_map.check_floor(self.hero.x, self.hero.y-1):
-                self.hero.move_up()
-                self.hero.draw_char(self.canvas)
+                next_y += 1
+        elif event.keysym == 'Right':
+                next_x += 1
+        elif event.keysym == 'Left':
+                next_x -= 1
+        elif event.keysym == 'Up':
+                next_y -= 1
+        if self.game_map.check_edge(next_x, next_y) and self.game_map.check_floor(next_x, next_y):
+            self.hero.move(next_x, next_y, self.hero.images[event.keysym])
+            self.hero.draw_all()
 
 
     def draw_all(self):

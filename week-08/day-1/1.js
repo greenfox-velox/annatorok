@@ -16,13 +16,13 @@ function countLetters(string) {
 console.log(countLetters('alma'));
 
 
-// function countLetters2(string) {
-//   return string.reduce(function (acc,e) {
-//    string[e] = string[e] + 1 || 1;
-//   }, {});
-// }
-//
-// console.log(countLetters2('alma'));
+function countLetters2(string) {
+  return string.split('').reduce(function (string,letter) {
+   string[letter] = string[letter] + 1 || 1;
+  }, {});
+}
+
+console.log(countLetters2('alma'));
 
 module.exports.countLetters = countLetters;
 

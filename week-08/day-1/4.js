@@ -69,7 +69,6 @@ function CarPark(income, startTime) {
   this.startTime = startTime;
   this.garage = [];
   this.parkingFeePerHour = 40;
-  this.income = 0;
 }
 //
 // Methods:
@@ -79,19 +78,21 @@ function CarPark(income, startTime) {
 
 CarPark.prototype.carEnter = function(car) {
   this.garage.push(car);
-  car.enter(new Date().getTime());
+  car.enter(this.startTime);
 }
 // carLeave(id)
 //  - It should remove the car with the given id and it should charge from its balance
 //
 
 CarPark.prototype.carLeave = function(id) {
-  this.garage.forEach(funciton (e) {
-    if (car.id === id) {
-
+  this.garage.forEach(function (e, i) {
+    if (e.id === id) {
+      var fee = this.parkingFeePerHour * (this.startTime - e.getEnterDate()) / 3600000;
+      e.leave(fee);
+      this.income += fee;
     }
-  })
-  // splice(carId)
+  });
+  this.garage.splice(i, 1);
 }
 
 // elapseTime(hours)
@@ -99,7 +100,7 @@ CarPark.prototype.carLeave = function(id) {
 //
 
 CarPark.prototype.elapseTime = function(hours) {
-
+  this.startTime += hours * 3600000
 }
 
 // Optional Methods:
@@ -113,9 +114,36 @@ CarPark.prototype.getStats = function() {
   return 'Cars: ' + this.garage.length + ', Time: ' + this.startTime + ', Income: ' + this.income;
 }
 
+var car1 = new Car('volvo', 'red', 500);
+var car2 = new Car('mazda', 'blue', 600);
+var car3 = new Car('lada', 'yellow', 300);
+
+var garage = new CarPark(100, new Date().getTime());
+
+garage.carEnter(car1);
+garage.carEnter(car2);
+garage.carEnter(car3);
+console.log(car1.id);
+console.log(car2.id);
+console.log(car3.id);
+console.log(car2.balance);
+console.log(garage.income);
+console.log(garage.garage);
+
+garage.elapseTime(5);
+
+garage.carLeave(2);
+
+console.log(car2.balance);
+console.log(garage.income);
+console.log(garage.garage);
+
+console.log(garage.getStats());
+
+
 // getParkingCarsSince(hours)
 //  - It should return the number of cars that are parking since the given hours
 
 // CarPark.prototype.getParkingCarsSince = function(hours) {
-//
+//   return this.garage[i]
 // }

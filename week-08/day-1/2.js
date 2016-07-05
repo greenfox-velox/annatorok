@@ -30,11 +30,19 @@ function countBooks() {
   students.forEach(function(e) {
     book += e.books && e.books.length || 0;
     // console.log(book);
-    }
+  }
   );
   return book;
 }
 
+function countBooksReduce(input) {
+  var bookz = input.reduce(function (book, e) {
+    return book += e.books && e.books.length || 0;
+  }, 0);
+  return bookz;
+}
+
 console.log(countBooks(students));
+console.log(countBooksReduce(students));
 
 module.exports.countBooks = countBooks;

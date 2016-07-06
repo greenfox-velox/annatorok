@@ -3,7 +3,7 @@
 // create a page: it should have a button that fires a request to the calendar api described here if it responses, it should wirte the current work day and how many celebrations are on that day
 
 var button = document.querySelector('button');
-button.addEventListener('click', clickMe)
+button.addEventListener('click', clickMe);
 
 function clickMe () {
   var xhr = new XMLHttpRequest();

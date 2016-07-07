@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+}
+
+.input-field, .submit-button {
+  margin: 10px;
+}

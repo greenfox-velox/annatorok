@@ -47,7 +47,7 @@ Car.prototype.getEnterDate = function() {
 }
 
 Car.prototype.leave = function(price) {
-  return this.balance -= this.price;
+  this.balance -= price;
 }
 
 Car.prototype.getStats = function() {

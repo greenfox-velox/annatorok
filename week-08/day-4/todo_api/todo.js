@@ -1,13 +1,14 @@
 'use strict';
 
-var url = 'http://127.0.0.1:3000/todos';
+var local = 'http://127.0.0.1:3000/todos';
+var url = 'https://mysterious-dusk-8248.herokuapp.com/todos';
 var addButton = document.querySelector('.add-button');
 var inputField = document.querySelector('input');
 var taskContainer = document.querySelector('ul');
 
 function getRequest() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
+  xhr.open('GET', local);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       displayTasks(xhr);

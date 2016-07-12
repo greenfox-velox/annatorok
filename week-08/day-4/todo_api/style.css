@@ -37,12 +37,14 @@ body {
     margin: 0;
 }
 
-h1 {
+header {
     font-family: Lato-Light, sans-serif;
     font-size: 64px;
     color: #cecece;
-    margin-left: 100px;
+    margin-left: 30px;
     padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 ul {
@@ -61,26 +63,28 @@ button {
    outline: none;
 }
 
-.delete {
-  background-image: url(delete_icon.png);
-  background-size: contain;
-  margin-left: 50px;
+.delete, .check, .uncheck {
   width: 24px;
   height: 24px;
+  float: right;
+  background-size: contain;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.delete {
+  background-image: url(delete_icon.png);
+  padding-left: 70px;
 }
 
 .check {
   background: url(check_icon.png);
   background-size: contain;
-  margin-left: 50px;
-  width: 24px;
-  height: 24px;
 }
 
 .uncheck {
   background: url(uncheck_icon.png);
   background-size: contain;
-  margin-left: 50px;
   width: 24px;
   height: 24px;
 }

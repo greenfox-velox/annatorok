@@ -35,6 +35,8 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var id = 3;
 app.use(bodyParser.json());
+app.use(express.static('../../../week-08/day-4/todo_api'));
+
 
 app.get('/todos', function(req, res) {
   res.send(todoList);
@@ -92,10 +94,10 @@ function deleteTodoItem(newTodo) {
 }
 
 app.delete('/todos/:id', urlencodedParser, function(req, res) {
-  if (err) {
-    res.status(404);
-  } else {
+  if (getOneTodo(req.params.id)) {
     res.send(deleteTodoItem(req.params.id));
+  } else {
+    res.sendStatus(404);
   }
 });
 

@@ -8,7 +8,7 @@ var taskContainer = document.querySelector('ul');
 
 function getRequest() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
+  xhr.open('GET', local);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       displayTasks(xhr);

@@ -56,6 +56,11 @@ ul {
     list-style-type: none;
 }
 
+li:hover {
+  color: black;
+  cursor: default;
+}
+
 button {
    background: transparent no-repeat;
    border: none;
@@ -75,6 +80,10 @@ button {
 .delete {
   background-image: url(delete_icon.png);
   padding-left: 70px;
+}
+
+.delete:hover {
+  transform: rotateZ(10deg);
 }
 
 .check {

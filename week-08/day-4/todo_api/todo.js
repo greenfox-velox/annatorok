@@ -1,87 +1,89 @@
 'use strict';
 
-var local = 'http://127.0.0.1:3000/todos';
-var url = 'https://mysterious-dusk-8248.herokuapp.com/todos';
+var local = 'http://localhost:3000/todos/';
+// var local = 'https://mysterious-dusk-8248.herokuapp.com/todos/';
 var addButton = document.querySelector('.add-button');
 var inputField = document.querySelector('input');
 var taskContainer = document.querySelector('ul');
 
-function getRequest() {
+addButton.addEventListener('click', addItem);
+
+// var response = JSON.parse(xhr.response);
+
+function httpRequest(method, url, data, callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', local);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      displayTasks(xhr);
+  xhr.open(method, url);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(data);
+  xhr.onload = function () {
+  if (xhr.readyState === xhr.DONE) {
+    callback(xhr.response);
     }
-  };
-  xhr.send();
+  }
+};
+
+function getRequest() {
+  httpRequest('GET', local, '', function (response) {
+    displayTasks(JSON.parse(response));
+  }
+);
 }
 
-function displayTasks(xhr) {
-  var taskList = JSON.parse(xhr.response);
-  taskList.forEach(function (e) {
+function addItem() {
+  httpRequest('POST', local, JSON.stringify({text: inputField.value}), function (response) {
+    displayOneItem(JSON.parse(response));
+  })
+};
+
+function displayOneItem(e) {
+  var newLi = document.createElement('li');
+  newLi.textContent = e.text;
+  newLi.setAttribute('id', 'l' + e.id)
+  taskContainer.appendChild(newLi);
+  createDeleteButton(newLi, e);
+  createCheckButton(newLi, e);
+  inputField.value = '';
+}
+
+function displayTasks(response) {
+  response.forEach(function (e) {
     displayOneItem(e);
   })
 }
 
-function displayOneItem(e) {
-  var newTask = document.createElement('li');
-  newTask.textContent = e.text;
-  newTask.setAttribute('id', 'l' + e.id)
-  taskContainer.appendChild(newTask);
-  createDeleteButton(newTask, e);
-  createCheckButton(newTask, e);
-  inputField.value = '';
-}
-
-function addItem() {
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  var newTaskText = inputField.value;
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      var response = JSON.parse(xhr.response);
-      displayOneItem(response);
-    }
+function completeTask(event, newLi) {
+  var id = event.target.parentNode.id;
+  var serverId = id.slice(1,10);
+  httpRequest('PUT', local + serverId, JSON.stringify({completed: true}), function (response) {
+    checkTask(event, id);
   }
-  xhr.send(JSON.stringify({text: newTaskText}));
+)}
+
+function checkTask(event, id) {
+  var button = document.querySelector('#' + event.target.id);
+  button.classList.toggle('check');
+  button.classList.toggle('uncheck');
 }
 
-function createDeleteButton(newTask, e) {
+function deleteTask(event) {
+  var id = event.target.parentNode.id;
+  var serverId = id.slice(1,10);
+  httpRequest('DELETE', local + serverId, JSON.stringify({destroyed: true}), function (response) {
+    document.getElementById(id).remove();
+  })
+}
+
+function createDeleteButton(newLi, e) {
   var deleteButton = document.createElement('button');
   deleteButton.classList.add('delete');
   deleteButton.setAttribute('id', 'd' + e.id)
-  newTask.appendChild(deleteButton);
-  deleteButton.addEventListener('click', function(event) {  // mi ez???????
+  newLi.appendChild(deleteButton);
+  deleteButton.addEventListener('click', function(event) {
     deleteTask(event);
   });
 }
 
-function deleteTask(event) {
-  var xhr = new XMLHttpRequest();
-  var id = event.target.parentNode.id;
-  var serverId = id.slice(1,10);
-  xhr.open('DELETE', url + '/' + serverId);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      document.getElementById(id).remove();
-    }
-  };
-  xhr.send();
-}
-
-// function removeTaskFromDisplay() {
-//   var allLi = document.querySelectorAll('li');
-//   for (var i = 0; i < allLi.length-1; i++) {
-//     if (allLi[i].id === event.target.id) {
-//       taskContainer.removeChild(allLi[i]);
-//     }
-//   }
-// }
-
-function createCheckButton(newTask, e) {
+function createCheckButton(newLi, e) {
   var checkButton = document.createElement('button');
   if (e.completed) {
     checkButton.classList.add('check');
@@ -89,34 +91,10 @@ function createCheckButton(newTask, e) {
     checkButton.classList.add('uncheck');
   }
   checkButton.setAttribute('id', 'c' + e.id)
-  newTask.appendChild(checkButton);
+  newLi.appendChild(checkButton);
   checkButton.addEventListener('click', function(event) {
-    completeTask(event, newTask);
+    completeTask(event, newLi);
   });
 }
-
-function completeTask(event, newTask) {
-  var xhr = new XMLHttpRequest();
-  var id = event.target.parentNode.id;
-  var serverId = id.slice(1,10);
-  var newTaskText =  event.target.parentNode.textContent;
-  xhr.open('PUT', url + '/' + serverId);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      checkTask(event, id);
-    }
-  }
-  xhr.send(JSON.stringify({text: newTaskText, completed: 'true'}));
-}
-
-function checkTask(event, id) {
-  // console.log(buttons);
-  var button = document.querySelector('#' + event.target.id);
-  button.classList.toggle('check');
-  button.classList.toggle('uncheck');
-}
-
-addButton.addEventListener('click', addItem);
 
 getRequest();

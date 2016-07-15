@@ -1,6 +1,6 @@
 'use strict';
 
-var mysql = require('mysql')
+var mysql = require('mysql');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');

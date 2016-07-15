@@ -1,5 +1,7 @@
 'use strict';
 
+// not working yet!!
+
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 
@@ -34,7 +36,7 @@ MongoClient.connect(url, function (err, db) {
 
      app.get('/todos/:id', function(req, res) {
      var req_id = parseInt(req.params.id);
-     collection.find({'id': req_id}, {'id': 1, 'text': 1, '_id': 0}), (function (err, result) {
+     collection.find({'id': req_id}, {'id': 1, 'text': 1, '_id': 0, 'destroyed': 1}), (function (err, result) {
       if (err) {
         console.log(err);
       }

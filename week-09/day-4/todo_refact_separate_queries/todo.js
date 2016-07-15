@@ -27,14 +27,12 @@ app.post('/todos', urlencodedParser, function(req, res) {
   });
 });
 
-// not yet working
 app.put('/todos/:id', urlencodedParser, function(req, res) {
   databaseQueries.checkItem(req.params.id, req.body.completed, function (result) {
   res.send(result);
 });
 });
 
-// not yet working
 app.delete('/todos/:id', urlencodedParser, function(req, res) {
     databaseQueries.deleteItem(req.params.id, function (result) {
     res.send(result);

@@ -8,8 +8,6 @@ var taskContainer = document.querySelector('ul');
 
 addButton.addEventListener('click', addItem);
 
-// var response = JSON.parse(xhr.response);
-
 function httpRequest(method, url, data, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open(method, url);
@@ -36,13 +34,16 @@ function addItem() {
 };
 
 function displayOneItem(e) {
-  var newLi = document.createElement('li');
-  newLi.textContent = e.text;
-  newLi.setAttribute('id', 'l' + e.id)
-  taskContainer.appendChild(newLi);
-  createDeleteButton(newLi, e);
-  createCheckButton(newLi, e);
-  inputField.value = '';
+  console.log(e.destroyed);
+  if (e.destroyed !== true) {
+    var newLi = document.createElement('li');
+    newLi.textContent = e.text;
+    newLi.setAttribute('id', 'l' + e.id)
+    taskContainer.appendChild(newLi);
+    createDeleteButton(newLi, e);
+    createCheckButton(newLi, e);
+    inputField.value = '';
+  }
 }
 
 function displayTasks(response) {
@@ -85,7 +86,7 @@ function createDeleteButton(newLi, e) {
 
 function createCheckButton(newLi, e) {
   var checkButton = document.createElement('button');
-  if (e.completed) {
+  if (e.completed === true) {
     checkButton.classList.add('check');
   } else {
     checkButton.classList.add('uncheck');

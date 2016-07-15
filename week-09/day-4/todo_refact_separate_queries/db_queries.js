@@ -54,7 +54,6 @@ function checkItem(id, completed, callback) {
             return;
   }
   callback({id: id, completed: true });
-  console.log(completed)
   });
 }
 

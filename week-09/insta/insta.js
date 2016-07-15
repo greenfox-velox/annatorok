@@ -1,7 +1,7 @@
 var googleUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 var instaUrl = 'https://crossorigin.me/https://api.instagram.com/v1/media/search?lat=';
 // var panoUrl = 'https://crossorigin.me/http://www.panoramio.com/map/get_panoramas.php?set=public&from=0&to=30&minx=-180&miny=-90&maxx=180&maxy=90&size=medium&mapfilter=false'
-var access_token = '';
+var access_token = '1313861570.62797d0.8558a95fbcda4b91872abe6e757358be';
 var inputField = document.querySelector('input');
 var searchButton = document.querySelector('.search-button');
 var result = document.querySelector('.result');

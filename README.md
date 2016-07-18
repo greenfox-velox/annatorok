@@ -41,9 +41,9 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 *Project: Build a CV page*
 
-[**Live CV**](http://annatorok.github.io/My-CV/index.html "CV of Anna Török")
+* [**Live CV**](http://annatorok.github.io/My-CV/index.html "CV of Anna Török")
 
-[**Live CV Anakin template**](http://annatorok.github.io/Anakin-CV/index.html "CV of Anakin")
+* [**Live CV Anakin template**](http://annatorok.github.io/Anakin-CV/index.html "CV of Anakin")
 
 ## Week 2:
 
@@ -98,7 +98,7 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 * [Image Gallery](https://github.com/greenfox-velox/annatorok/tree/master/week-07/day-04)
 
-[**Live version of image gallery**](http://annatorok.github.io/JS-Gallery/index.html)
+* [**Live version of image gallery**](http://annatorok.github.io/JS-Gallery/index.html)
 
 ## Week 8
 
@@ -112,7 +112,7 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
   <img src="http://i65.tinypic.com/2ymueyq.png" alt="TODO app" height=400px>
 </p>
 
-[**Live version of Yodanator**](http://annatorok.github.io/Yoda/yoda.html)
+* [**Live version of Yodanator**](http://annatorok.github.io/Yoda/yoda.html)
 
 ## Week 9
 
@@ -122,7 +122,7 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 * [TODO app](https://github.com/greenfox-velox/annatorok/tree/master/week-09/day-4)
 
-[**Live version of Insta image query**](http://annatorok.github.io/Insta/index.html)
+* [**Live version of Insta image query**](http://annatorok.github.io/Insta/index.html)
 
 <p align="center">
   <img src="http://i64.tinypic.com/2gt4rom.png" alt="TODO app" height=400px>

@@ -7,7 +7,15 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 ---
 
-# [GreenFox Academy](http://www.greenfoxacademy.com/) ![Green Fox logo](https://tinyurl.com/hgzse3j "Logo")
+<h1 align="center"><a href="http://www.greenfoxacademy.com/">GreenFox Academy</a></h1>
+<p align="center">
+  <img src="https://tinyurl.com/hgzse3j" height="100px">
+</p>
+
+
+# [GreenFox Academy](http://www.greenfoxacademy.com/)
+<p align="center"> ![Green Fox logo]
+(https://tinyurl.com/hgzse3j "Logo")</p>
 
 ## Velox class
 
@@ -28,6 +36,9 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 * [Week 5](https://docs.google.com/presentation/d/1tbA-rMwy28KYGNSLAc_xsTSRG7qp0OnThzMkjNa1AHU/edit?usp=sharing)
 * Week 6 - no demo
 * [Week 7](https://docs.google.com/presentation/d/1W4HGgpGMjIjjzdYY-5D-pwZOAyBiENLR-_4xbXE2tgE/edit?usp=sharing)
+* [Week 8](https://docs.google.com/presentation/d/1CYl0wTP8QnkJR7YVNztqe60s-vbCwpeGLvhD6VziCZw/edit?usp=sharing)
+* [Week 9](https://docs.google.com/presentation/d/1UsnaXATKD9L81Hg6nX--xXu-b1ZDlT5emnQDYet-JBw/edit?usp=sharing)
+
 
 ## Week 1
 
@@ -93,3 +104,31 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 * [Image Gallery](https://github.com/greenfox-velox/annatorok/tree/master/week-07/day-04)
 
 [**Live version of image gallery**](http://annatorok.github.io/JS-Gallery/index.html)
+
+## Week 8
+
+[**Week 8 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-08)
+
+*Project: Create frontend for TODO app using API*
+
+* [TODO app](https://github.com/greenfox-velox/annatorok/tree/master/week-08/day-4/todo_api)
+
+<p align="center">
+  <img src="http://i65.tinypic.com/2ymueyq.png" alt="TODO app" height=400px>
+</p>
+
+[**Live version of Yodanator**](http://annatorok.github.io/Yoda/yoda.html)
+
+## Week 9
+
+[**Week 9 syllabus**](https://github.com/greenfox-velox/velox-syllabus/tree/master/week-09)
+
+*Project: Create backend for TODO app with MySQL and MongoDB*
+
+* [TODO app](https://github.com/greenfox-velox/annatorok/tree/master/week-09/day-4)
+
+[**Live version of Insta image query**](http://annatorok.github.io/Insta/index.html)
+
+<p align="center">
+  <img src="http://i64.tinypic.com/2gt4rom.png" alt="TODO app" height=400px>
+</p>

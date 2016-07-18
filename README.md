@@ -7,7 +7,7 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 ---
 
-# [GreenFox Academy](http://www.greenfoxacademy.com/)
+<h1 align="center"><a href="http://www.greenfoxacademy.com/">GreenFox Academy</a></h1>
 <p align="center">
   <img src="https://tinyurl.com/hgzse3j">
 </p>

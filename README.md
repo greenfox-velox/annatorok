@@ -7,15 +7,10 @@ Endorse my skills on [![LinkedIn logo](http://i67.tinypic.com/2j43mus.jpg "Linke
 
 ---
 
-<h1 align="center"><a href="http://www.greenfoxacademy.com/">GreenFox Academy</a></h1>
-<p align="center">
-  <img src="https://tinyurl.com/hgzse3j" height="100px">
-</p>
-
-
 # [GreenFox Academy](http://www.greenfoxacademy.com/)
-<p align="center"> ![Green Fox logo]
-(https://tinyurl.com/hgzse3j "Logo")</p>
+<p align="center">
+  <img src="https://tinyurl.com/hgzse3j">
+</p>
 
 ## Velox class
 

@@ -17,52 +17,44 @@ con.connect(function(err){
   console.log("Connection established");
 });
 
+function errorHandling (err) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+}
+
 function getTodos(callback) {
   con.query('SELECT * FROM todoList', function (err, result) {
-    if (err) {
-      console.log(err);
-      return;
-    }
+    errorHandling(err);
     callback(result);
   });
 }
 
 function getOneTodoItem(id, callback) {
   con.query('SELECT * FROM todoList WHERE id = ' + id, function (err, result) {
-       if (err) {
-            console.log(err);
-            return;
-  }
+ errorHandling(err);
   callback(result[0]);
   });
 }
 
 function addOneItem(text, callback) {
   con.query('INSERT INTO todoList SET text = ?', text, function (err, result) {
-    if (err) {
-            console.log(err);
-      return;
-    }
+    errorHandling(err);
     callback({ id: result.insertId, text: text });
     });
 }
 
 function checkItem(id, completed, callback) {
   con.query('UPDATE todoList SET completed = 1 WHERE id = ' + id, function (err, result) {
-       if (err) {
-            console.log(err);
-            return;
-  }
+   errorHandling(err);
   callback({id: id, completed: true });
   });
 }
 
 function deleteItem(id, callback) {
   con.query('DELETE from todoList WHERE id = ' + id, function (err, result) {
-       if (err) {
-            console.log(err);
-            return;
-  }
+  errorHandling(err);
   callback({destroyed: true});
   });
 }
